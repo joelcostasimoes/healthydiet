@@ -1,0 +1,24 @@
+o que falta fazer:
+odete:
+	imagens para o slide show exemplo - http://www.sovex.pt/wp-content/uploads/2016/03/pub.CRANBERRY.WEB_.jpg
+	text com uma breve descrição da marca : 
+	A Healthy Diet é uma marca nacional que possui produtos próprios, 
+	com um espaço onde encontra uma selecção dos 
+	melhores produtos aos melhores preços e com grande diversidade de marcas.
+	
+Joel
+
+	
+	emails necessarios: esqueceu a sua password, registo, concluir encomenda, newsletter, remover incrição de newsletter.
+	colocar imagens no slideshow
+	enviar email para o administrador atraves do formulario de contactos.
+	colocar Li e aceito os Termos e Condições e Politicas de Privacidade para as newsletter e criar funçao para guardar email para newsletter.
+	links das categorias nao funcionam
+	Links das redes sociais.
+	Links uteis (politica de privacidade, termos e condiçoes de uso, centro de apoio ao consumidor)
+	nao deixar encomendar caso nao tenha produtos no carrinho.
+	
+	
+	
+	
+	

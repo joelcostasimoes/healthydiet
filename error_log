@@ -1,0 +1,96 @@
+[03-Oct-2016 22:24:50 Europe/Lisbon] PHP Parse error:  syntax error, unexpected T_ARRAY in /home/healthy1/dev.healthydiet.pt/application/controllers/App.php on line 32
+[03-Oct-2016 22:24:51 Europe/Lisbon] PHP Parse error:  syntax error, unexpected T_ARRAY in /home/healthy1/dev.healthydiet.pt/application/controllers/App.php on line 32
+[03-Oct-2016 22:58:33 Europe/Lisbon] PHP Fatal error:  Can't use function return value in write context in /home/healthy1/dev.healthydiet.pt/application/controllers/App.php on line 77
+[03-Oct-2016 22:58:33 Europe/Lisbon] PHP Fatal error:  Can't use function return value in write context in /home/healthy1/dev.healthydiet.pt/application/controllers/App.php on line 77
+[03-Oct-2016 23:04:36 Europe/Lisbon] PHP Fatal error:  __clone method called on non-object in /home/healthy1/dev.healthydiet.pt/application/controllers/App.php on line 77
+[03-Oct-2016 23:04:36 Europe/Lisbon] PHP Fatal error:  __clone method called on non-object in /home/healthy1/dev.healthydiet.pt/application/controllers/App.php on line 77
+[03-Oct-2016 23:04:54 Europe/Lisbon] PHP Fatal error:  __clone method called on non-object in /home/healthy1/dev.healthydiet.pt/application/controllers/App.php on line 77
+[03-Oct-2016 23:04:54 Europe/Lisbon] PHP Fatal error:  __clone method called on non-object in /home/healthy1/dev.healthydiet.pt/application/controllers/App.php on line 77
+[03-Oct-2016 23:05:24 Europe/Lisbon] PHP Fatal error:  __clone method called on non-object in /home/healthy1/dev.healthydiet.pt/application/controllers/App.php on line 79
+[03-Oct-2016 23:05:25 Europe/Lisbon] PHP Fatal error:  __clone method called on non-object in /home/healthy1/dev.healthydiet.pt/application/controllers/App.php on line 79
+[03-Oct-2016 23:12:43 Europe/Lisbon] PHP Fatal error:  __clone method called on non-object in /home/healthy1/dev.healthydiet.pt/application/controllers/App.php on line 79
+[03-Oct-2016 23:12:44 Europe/Lisbon] PHP Fatal error:  __clone method called on non-object in /home/healthy1/dev.healthydiet.pt/application/controllers/App.php on line 79
+[05-Oct-2016 17:50:16 Europe/Lisbon] PHP Parse error:  syntax error, unexpected ';' in /home/healthy1/dev.healthydiet.pt/application/controllers/App.php on line 103
+[05-Oct-2016 17:50:32 Europe/Lisbon] PHP Parse error:  syntax error, unexpected ';' in /home/healthy1/dev.healthydiet.pt/application/controllers/App.php on line 111
+[20-Sep-2017 23:58:31 europe/lisbon] PHP Fatal error:  Call to undefined function dd() in /home/socialm1/public_html/healthydiet/application/views/account/account.php on line 9
+[20-Sep-2017 23:58:52 europe/lisbon] PHP Fatal error:  Call to undefined function vardump() in /home/socialm1/public_html/healthydiet/application/views/account/account.php on line 9
+[27-Sep-2017 20:33:23 europe/lisbon] PHP Fatal error:  require_once(): Failed opening required '/home/socialm1/public_html/healthydiet/application/libraries/tcpdf/tcpdf.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/socialm1/public_html/healthydiet/application/libraries/Pdf.php on line 3
+[27-Sep-2017 20:33:57 europe/lisbon] PHP Fatal error:  require_once(): Failed opening required '/home/socialm1/public_html/healthydiet/application/libraries/tcpdf/tcpdf.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/socialm1/public_html/healthydiet/application/libraries/Pdf.php on line 3
+[27-Sep-2017 20:48:18 europe/lisbon] PHP Fatal error:  require_once(): Failed opening required '/home/socialm1/public_html/healthydiet/application/libraries/tcpdf/tcpdf.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/socialm1/public_html/healthydiet/application/libraries/Pdf.php on line 3
+[27-Sep-2017 21:08:37 europe/lisbon] PHP Fatal error:  Call to undefined method Pdf::load() in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 427
+[27-Sep-2017 21:11:10 europe/lisbon] PHP Fatal error:  Call to undefined method Pdf::load() in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 428
+[27-Sep-2017 21:15:48 europe/lisbon] PHP Fatal error:  Call to a member function WriteHTML() on null in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 429
+[27-Sep-2017 21:27:24 europe/lisbon] PHP Fatal error:  Call to a member function WriteHTML() on null in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 429
+[27-Sep-2017 21:28:45 europe/lisbon] PHP Fatal error:  Call to undefined method Pdf::load() in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 428
+[27-Sep-2017 21:28:54 europe/lisbon] PHP Fatal error:  Call to undefined method Pdf::load() in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 428
+[27-Sep-2017 22:00:02 europe/lisbon] PHP Fatal error:  require_once(): Failed opening required 'tcpdf_include.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 428
+[27-Sep-2017 22:04:11 europe/lisbon] PHP Fatal error:  Call to undefined method Pdf::load_view() in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 428
+[27-Sep-2017 22:04:54 europe/lisbon] PHP Fatal error:  Call to undefined method Pdf::load_view() in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 427
+[27-Sep-2017 22:08:00 europe/lisbon] PHP Fatal error:  Call to undefined method Pdf::load_view() in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 427
+[27-Sep-2017 22:19:21 europe/lisbon] PHP Parse error:  syntax error, unexpected ';' in /home/socialm1/public_html/healthydiet/application/libraries/mpdf60/mpdf.php on line 52
+[27-Sep-2017 22:19:35 europe/lisbon] PHP Fatal error:  require_once(): Failed opening required 'mpdf/includes/functions.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/socialm1/public_html/healthydiet/application/libraries/mpdf60/mpdf.php on line 55
+[27-Sep-2017 22:26:11 europe/lisbon] PHP Fatal error:  require_once(): Failed opening required 'mpdf/includes/functions.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/socialm1/public_html/healthydiet/application/libraries/mpdf60/mpdf.php on line 55
+[27-Sep-2017 22:27:21 europe/lisbon] PHP Fatal error:  require_once(): Failed opening required 'mpdf/includes/functions.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/socialm1/public_html/healthydiet/application/libraries/mpdf60/mpdf.php on line 55
+[27-Sep-2017 23:09:40 Europe/London] PHP Fatal error:  Call to a member function WriteHTML() on null in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 430
+[27-Sep-2017 23:10:16 Europe/London] PHP Fatal error:  Call to a member function WriteHTML() on null in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 430
+[27-Sep-2017 23:16:02 Europe/London] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/socialm1/public_html/healthydiet/application/third_party/mpdf/mpdf.php on line 30643
+[27-Sep-2017 23:37:52 europe/lisbon] PHP Fatal error:  Call to a member function WriteHTML() on null in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 436
+[27-Sep-2017 23:41:44 europe/lisbon] PHP Fatal error:  Class 'mPDF' not found in /home/socialm1/public_html/healthydiet/application/libraries/M_pdf.php on line 13
+[27-Sep-2017 23:47:28 europe/lisbon] PHP Fatal error:  Class 'mPDF' not found in /home/socialm1/public_html/healthydiet/application/libraries/M_pdf.php on line 13
+[27-Sep-2017 23:48:58 europe/lisbon] PHP Fatal error:  Class 'mPDF' not found in /home/socialm1/public_html/healthydiet/application/libraries/M_pdf.php on line 13
+[27-Sep-2017 23:51:39 europe/lisbon] PHP Fatal error:  Class 'mPDF' not found in /home/socialm1/public_html/healthydiet/application/libraries/M_pdf.php on line 13
+[27-Sep-2017 23:56:36 europe/lisbon] PHP Fatal error:  Cannot use object of type CI_Loader as array in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 425
+[27-Sep-2017 23:59:11 Europe/London] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/socialm1/public_html/healthydiet/application/third_party/mPDF/mpdf.php on line 30917
+[28-Sep-2017 00:00:27 Europe/London] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/socialm1/public_html/healthydiet/application/third_party/mPDF/mpdf.php on line 30917
+[10-Oct-2017 21:12:52 europe/lisbon] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/socialm1/public_html/healthydiet/application/views/account/checkout.php on line 43
+[11-Oct-2017 00:04:44 europe/lisbon] PHP Fatal error:  Call to undefined function free_transport() in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 348
+[11-Oct-2017 00:05:33 europe/lisbon] PHP Fatal error:  Call to undefined function free_transport() in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 348
+[11-Oct-2017 00:06:43 europe/lisbon] PHP Fatal error:  Call to undefined function free_transport() in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 347
+[11-Oct-2017 21:40:17 europe/lisbon] PHP Parse error:  syntax error, unexpected end of file in /home/socialm1/public_html/healthydiet/application/config/constants.php on line 360
+[11-Oct-2017 21:40:53 europe/lisbon] PHP Warning:  Constants may only evaluate to scalar values in /home/socialm1/public_html/healthydiet/application/config/constants.php on line 360
+[11-Oct-2017 21:40:53 europe/lisbon] PHP Warning:  Constants may only evaluate to scalar values in /home/socialm1/public_html/healthydiet/application/config/constants.php on line 360
+[11-Oct-2017 21:40:54 europe/lisbon] PHP Warning:  Constants may only evaluate to scalar values in /home/socialm1/public_html/healthydiet/application/config/constants.php on line 360
+[11-Oct-2017 21:41:15 europe/lisbon] PHP Warning:  Constants may only evaluate to scalar values in /home/socialm1/public_html/healthydiet/application/config/constants.php on line 360
+[11-Oct-2017 21:41:22 europe/lisbon] PHP Warning:  Constants may only evaluate to scalar values in /home/socialm1/public_html/healthydiet/application/config/constants.php on line 360
+[11-Oct-2017 21:41:23 europe/lisbon] PHP Warning:  Constants may only evaluate to scalar values in /home/socialm1/public_html/healthydiet/application/config/constants.php on line 360
+[11-Oct-2017 21:41:23 europe/lisbon] PHP Warning:  Constants may only evaluate to scalar values in /home/socialm1/public_html/healthydiet/application/config/constants.php on line 360
+[11-Oct-2017 21:41:23 europe/lisbon] PHP Warning:  Constants may only evaluate to scalar values in /home/socialm1/public_html/healthydiet/application/config/constants.php on line 360
+[11-Oct-2017 21:41:26 europe/lisbon] PHP Warning:  Constants may only evaluate to scalar values in /home/socialm1/public_html/healthydiet/application/config/constants.php on line 360
+[11-Oct-2017 21:41:26 europe/lisbon] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/socialm1/public_html/healthydiet/application/views/account/account.php on line 215
+[11-Oct-2017 21:41:55 europe/lisbon] PHP Warning:  Constants may only evaluate to scalar values in /home/socialm1/public_html/healthydiet/application/config/constants.php on line 360
+[11-Oct-2017 23:16:57 europe/lisbon] PHP Warning:  Constants may only evaluate to scalar values in /home/socialm1/public_html/healthydiet/application/config/constants.php on line 360
+[11-Oct-2017 23:29:22 europe/lisbon] PHP Warning:  Constants may only evaluate to scalar values in /home/socialm1/public_html/healthydiet/application/config/constants.php on line 360
+[11-Oct-2017 23:30:08 europe/lisbon] PHP Warning:  Constants may only evaluate to scalar values in /home/socialm1/public_html/healthydiet/application/config/constants.php on line 360
+[11-Oct-2017 23:53:22 europe/lisbon] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/socialm1/public_html/healthydiet/application/views/account/account.php on line 162
+[11-Oct-2017 23:54:41 europe/lisbon] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/socialm1/public_html/healthydiet/application/views/account/account.php on line 166
+[14-Oct-2017 02:47:35 europe/lisbon] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 356
+[14-Oct-2017 02:48:47 europe/lisbon] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 356
+[14-Oct-2017 02:48:50 europe/lisbon] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 356
+[14-Oct-2017 02:48:51 europe/lisbon] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 356
+[14-Oct-2017 02:51:14 europe/lisbon] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 374
+[14-Oct-2017 02:51:17 europe/lisbon] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 374
+[29-Oct-2017 19:44:21 europe/lisbon] PHP Fatal error:  Call to undefined function result() in /home/socialm1/public_html/healthydiet/application/models/Account_model.php on line 528
+[29-Oct-2017 19:48:38 europe/lisbon] PHP Parse error:  syntax error, unexpected ')' in /home/socialm1/public_html/healthydiet/application/models/Account_model.php on line 529
+[29-Oct-2017 21:07:48 europe/lisbon] PHP Parse error:  syntax error, unexpected 'if' (T_IF) in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 375
+[29-Oct-2017 21:09:04 europe/lisbon] PHP Parse error:  syntax error, unexpected '<=' (T_IS_SMALLER_OR_EQUAL) in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 375
+[29-Oct-2017 21:09:36 europe/lisbon] PHP Fatal error:  Cannot use object of type stdClass as array in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 375
+[29-Oct-2017 21:10:04 europe/lisbon] PHP Fatal error:  Cannot use object of type stdClass as array in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 374
+[29-Oct-2017 21:10:26 europe/lisbon] PHP Fatal error:  Cannot use object of type stdClass as array in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 375
+[01-Nov-2017 14:03:27 europe/lisbon] PHP Fatal error:  Unsupported operand types in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 418
+[01-Nov-2017 15:01:50 europe/lisbon] PHP Fatal error:  Unsupported operand types in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 437
+[01-Nov-2017 15:04:12 europe/lisbon] PHP Fatal error:  Unsupported operand types in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 437
+[01-Nov-2017 15:17:23 europe/lisbon] PHP Fatal error:  Unsupported operand types in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 438
+[01-Nov-2017 15:18:02 europe/lisbon] PHP Fatal error:  Unsupported operand types in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 438
+[01-Nov-2017 15:27:14 europe/lisbon] PHP Fatal error:  Unsupported operand types in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 439
+[01-Nov-2017 15:27:48 europe/lisbon] PHP Fatal error:  Unsupported operand types in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 438
+[01-Nov-2017 15:28:56 europe/lisbon] PHP Fatal error:  Unsupported operand types in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 438
+[01-Nov-2017 15:30:14 europe/lisbon] PHP Fatal error:  Unsupported operand types in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 438
+[01-Nov-2017 15:30:19 europe/lisbon] PHP Fatal error:  Unsupported operand types in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 438
+[01-Nov-2017 15:30:45 europe/lisbon] PHP Fatal error:  Unsupported operand types in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 438
+[01-Nov-2017 15:34:59 europe/lisbon] PHP Fatal error:  Unsupported operand types in /home/socialm1/public_html/healthydiet/application/controllers/Account.php on line 440
+[01-Nov-2017 15:35:48 Europe/Lisbon] PHP Fatal error:  Cannot use object of type stdClass as array in /home/socialm1/public_html/healthydiet/application/views/email/recibo.php on line 138
+[01-Nov-2017 15:41:50 Europe/Lisbon] PHP Fatal error:  Cannot use object of type stdClass as array in /home/socialm1/public_html/healthydiet/application/views/email/recibo.php on line 138
+[01-Nov-2017 15:42:33 Europe/Lisbon] PHP Fatal error:  Cannot use object of type stdClass as array in /home/socialm1/public_html/healthydiet/application/views/email/recibo.php on line 138
+[01-Nov-2017 15:49:28 Europe/Lisbon] PHP Fatal error:  Cannot use object of type stdClass as array in /home/socialm1/public_html/healthydiet/application/views/email/recibo.php on line 141
+[01-Nov-2017 15:50:51 Europe/Lisbon] PHP Fatal error:  Cannot use object of type stdClass as array in /home/socialm1/public_html/healthydiet/application/views/email/recibo.php on line 141
+[01-Nov-2017 15:53:20 Europe/Lisbon] PHP Fatal error:  Cannot use object of type stdClass as array in /home/socialm1/public_html/healthydiet/application/views/email/recibo_admin.php on line 123

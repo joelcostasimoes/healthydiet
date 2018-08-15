@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{REQUEST_URI} ^/system.*
+RewriteRule ^invoice/?$ public/invoice/$1 [R,NC,L]
+Redirect /public/invoice/(.*) invoice/$1
+
+
+

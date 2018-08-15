@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <title>
+            Encomenda xxxx
+        </title>
+    </head>
+    <style type="text/css" media="screen">
+        .logo{
+        margin: 20px;
+        width: 130px;
+        }
+        p{
+            margin:0px;
+        }
+        .p_header{
+        margin: 20px;
+        }
+        .active{
+        margin-top: 20px;
+        margin-bottom: 40px;
+        }
+        .active a{
+        text-decoration: none;
+        color: #fff;
+        background-color: #a4c736;
+        padding: 3px 5px;
+        font-weight: bold;
+        border-radius: 4px;
+        box-shadow: 0px 2px 1px rgba(50, 50, 50, 0.75);
+        }
+        .active a:focus{
+        box-shadow: 0px 1px 0px rgba(50, 50, 50, 0.75);
+        }
+        .footer img{
+            width: 30px;
+        }
+        .footer a{
+            margin:20px 5px;
+            text-decoration: none;
+        }
+        .address{
+            float: left; 
+            width: 300px;
+            margin-top: 10px;
+        }
+        .address p{
+            padding:0px 20px;
+            margin-bottom: 5px;
+        }
+        .address p:first-child{
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .header-left{
+            width:300px;
+            float: left;
+        }
+        .header-left img{
+            margin: 20px;
+            width: 130px;
+        }
+        .header-left p{
+            font-family: arial;
+            font-size: 12px;
+            margin: 5px 20px;
+            max-width: 100%;
+        }
+        .header-right{
+            width:300px;
+            float: left;
+        }
+        .header-right p:first-child{
+            width:100%;
+            text-align: center;
+            margin-bottom: 70px;
+            margin-top: 20px;
+        }
+        .value-left{
+            width:45%;
+            text-align: right;
+            float: left;
+            margin: 0px;
+        }
+        .value-right{
+            width:50%;
+            text-align: left;
+            float: left;
+            margin: 0px 0px 10px 10px;
+        }
+        .list table{
+            border-collapse:collapse;
+            border: 3px solid #000;
+        }
+        .list {
+            float: left;
+            margin-top: 50px;
+            padding: 20px;
+        }
+        .list table th,.list table td{
+            border: 1px solid;
+            padding: 0px 5px;
+        }
+        .list table td{
+            height: 30px;
+            vertical-align: middle;
+        }
+        .last-rows{
+            text-align: right;
+            padding-right: 10px;
+        }
+    </style>
+    <body>
+        <div class="header-left">
+            <img class="logo" src="http://localhost:8080/nutritionWellness/public/img/logo2.png"  style="margin: 20px;width: 130px;height:auto;" alt="logo healthy diet"/>
+            <p>Rua de Santo António Nº100</p>
+            <p>2435-063 Caxarias - Ourém</p>
+            <p>Portugal</p>
+        </div>
+        <div class="header-right" >
+            <p>ENCOMENDA</p>
+            <p class="value-left">Data:</p>
+            <p class="value-right">21/03/2016</p>
+            <p class="value-left">Nº de Utilizador:</p>
+            <p class="value-right">13980580</p>
+            <p class="value-left">Nº de Contribuinte:</p>
+            <p class="value-right">13980580</p>
+            <p class="value-left">Encomenda nº:</p>
+            <p class="value-right">38921741</p>
+        </div>
+        <div class="address">
+            <p>Facturado a:</p>
+            <p>Joel Simões</p>
+            <p>Rua da escola primária nº88A</p>
+            <p>2300-608 Tomar</p>
+            <p>Valdonas</p>
+        </div>
+        <div class="address">
+            <p>Facturado a:</p>
+            <p>Joel Simões</p>
+            <p>Rua da escola primária nº88A</p>
+            <p>2300-608 Tomar</p>
+            <p>Valdonas</p>
+        </div>
+        <div class="list">
+            <table>
+            <thead>
+                <tr>
+                    <th>Codigo do produto</th>
+                    <th>Nome</th>
+                    <th>Preço</th>
+                    <th>Quantidade</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Jointflex Trio - 60 comprimidos</td>
+                    <td>20€</td>
+                    <td>1</td>
+                    <td>20€</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Jointflex Trio - 60 comprimidos</td>
+                    <td>20€</td>
+                    <td>1</td>
+                    <td>20€</td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="last-rows">Sub-Total:</td>
+                    <td>20€</td>
+                </tr>
+                <tr>
+                    <td colspan="4" class="last-rows">Iva 23%:</td>
+                    <td>20€</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </body>
+</html>
