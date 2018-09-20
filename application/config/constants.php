@@ -95,10 +95,10 @@ define("NO_IMAGE_PATH", "");
 
 /* Database */
 define('DB_HOSTNAME', 'localhost');
-define('DB_SCHEMA', 'socialm1_healthydiet');
-define('DB_USERNAME', 'socialm1_healthydiet');
-define('DB_PASSWORD', '249321761');
+define('DB_SCHEMA', 'healthy1_db');
+define('DB_USERNAME', 'healthy1_adm');
+define('DB_PASSWORD', 'healthy1_db');
 
 /* Ours */
-define('URL_BASE', 'http://socialmm.pt/healthydiet/');
+define('URL_BASE', 'http://healthydiet.pt/loja/');
 define('FREE_TRANSPORT', '40');
