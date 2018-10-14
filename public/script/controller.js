@@ -1,5 +1,5 @@
 var app = angular.module('healthyDiet', ['dcbImgFallback']);
-var base_url = 'http://socialmm.pt/healthydiet/';
+var base_url = 'http://healthydiet.pt/loja/';
 app.filter('offset', function() {
     return function(input, start) {
         start = parseInt(start, 10);
@@ -207,7 +207,7 @@ app.controller('register', function($scope, $http) {
                 minlength: 3,
                 maxlength: 300
             },
-            
+
             ezipName: {
                 required: {
                     depends: function() {
@@ -340,7 +340,7 @@ app.controller('my-account', function($scope, $http) {
                 minlength: 3,
                 maxlength: 300
             },
-           
+
             ezipName: {
                 required: {
                     depends: function() {
@@ -390,8 +390,8 @@ app.controller('cart', function($scope, $log, $http, $window) {
         });
         $scope.subTotal=$scope.subTotal.toFixed(2);
     };
-    
-    
+
+
     $scope.addItem = function(quantity, idProduct) {
         var quantity = $scope.quantity[idProduct];
         $.ajax({
@@ -443,7 +443,7 @@ app.controller('subscriveNewsletter', function($scope, $log, $http) {
 
     $scope.subscrive = function() {
         console.log($scope.terms);
-        if ($scope.terms==true) {        
+        if ($scope.terms==true) {
             $.ajax({
                 url: base_url + "subscriveNewsletter",
                 type: "POST",
@@ -467,7 +467,7 @@ app.controller('info', function($scope, $log, $http,$timeout) {
         if (value != null) {
             $('#infoModal').modal('show');
             $timeout(function() {
-                 $('#infoModal').modal('hide')       
+                 $('#infoModal').modal('hide')
             }, 18000);
         }
     };
@@ -567,7 +567,7 @@ app.controller('contact', function($scope, $log, $http) {
             name: {
                 required: true,
                 minlength: 3,
-            },            
+            },
             email: {
                 required: true,
                 email: true
