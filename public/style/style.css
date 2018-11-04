@@ -129,7 +129,6 @@ ul {
 }
 
 .title-two {
-    margin-left: 85px;
     color: #e82583!important;
 }
 
@@ -1014,7 +1013,7 @@ form.cart {
 form .list-cart{
     margin-left: -1px;
     margin-top: -1px;
-    border:1px solid #eee; 
+    border:1px solid #eee;
 }
 
 .product-inner-category {
@@ -2145,7 +2144,7 @@ label.error:before {
 /* Colors marked lightest (1) to darkest (8)
    -------------------------------------------------------------------------- */
 
-.waiting:before { 
+.waiting:before {
     box-shadow:
         /* 1 */
         0 1em #E82583,
