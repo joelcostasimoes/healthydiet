@@ -10,9 +10,9 @@
                             <li><a href="<?=base_url()?>logout" ><i class="fa fa-sign-out"></i> Terminar Sessão</a></li>
                             <?php }else { ?>
                             <li><a href="<?=base_url()?>register"><i class="fa fa-user-plus"></i> Criar Conta</a></li>
-                            <li><a href="" data-toggle="modal" data-target="#loginModal"><i class="fa fa-sign-in"></i> Iniciar Sessão</a></li>        
+                            <li><a href="" data-toggle="modal" data-target="#loginModal"><i class="fa fa-sign-in"></i> Iniciar Sessão</a></li>
                             <?php } ?>
-                        </ul> 
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -65,8 +65,8 @@
                 <input type="email" placeholder="Introduza o seu email" ng-model="email">
             </div>
             <div class="waiting"></div>
-            <div class="error"></div> 
-            <div class="success"></div> 
+            <div class="error"></div>
+            <div class="success"></div>
         </div>
           <div class="modal-footer">
             <button type="button" class="add_to_cart_button" data-dismiss="modal">Cancelar</button>
@@ -104,7 +104,7 @@
                         <h1>
                             <a href="<?=base_url()?>">
                                 <p class="title-one">HEALTHY</p>
-                                
+
                                 <p class="title-two"><img src="<?=base_url()?>public/img/logo.png" alt="" class="img-logo" >Diet</p>
                             </a>
                         </h1>
@@ -133,16 +133,23 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                </div> 
+                </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a href="<?=base_url()?>">Home</a></li>
                         <li>
-                            <a href="<?=base_url()?>products"><span class="key">Produtos</span></a>
+                            <a href="<?=base_url()?>products">Alimentação</a>
                         </li>
-                        <li><a href="<?=base_url()?>contacts">Contactos</a></li>
+                        <li>
+                            <a href="<?=base_url()?>products">Suplementação</a>
+                        </li>
+                        <li>
+                            <a href="<?=base_url()?>products">Cosmética</a>
+                        </li>
+                        <li>
+                            <a href="<?=base_url()?>contacts">Contactos</a>
+                        </li>
                     </ul>
-                    <div class="box-search floatright">                        
+                    <div class="box-search floatright">
                         <form action="<?=base_url()?>products" method="post" accept-charset="utf-8">
                             <div class="floatright">
                                 <input class="txt-search" name="txtSearch" type="text">
@@ -150,11 +157,11 @@
                             </div>
                         </form>
                     </div>
-                    
-                </div> 
+
+                </div>
 
             </div>
         </div>
     </div>
-    
-    
+
+
