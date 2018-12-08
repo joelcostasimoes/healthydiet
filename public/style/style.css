@@ -157,7 +157,38 @@ ul {
 
 .logo h1 a span {
     color: #a4c736;
+    vertical-align: middle;
 }
+
+
+/********* Where we are *****/
+.maps{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 40px;
+}
+.store-title{
+    font-size: 15px;
+    color:#000;
+    font-weight: bold;
+}
+
+/********* Where we are *****/
+
+
+
+/********* Services *****/
+.services > div p{
+    margin-bottom: 40px;
+}
+.services span{
+    font-size: 18px;
+}
+
+.span-bold{
+    font-weight: bold;
+}
+/********* Services *****/
 
 .shopping-item {
     border: 1px solid #ddd;
@@ -1075,7 +1106,7 @@ form .list-cart{
     width: 100%;
 }
 . show-errors{
-     height: 25px;
+   height: 25px;
 }
 .rating-chooser {
     margin-bottom: 30px;
@@ -1439,6 +1470,9 @@ li.dropdown-hover .dropdown-menu {
 .box-search {
     float: right;
     height: 100%;
+    margin-top: 26px;
+    min-height: 1px;
+    padding-right: 15px;
 }
 
 .txt-search {
@@ -1469,10 +1503,18 @@ button.sbt-search span {
     position: relative;
 }
 
-.user-menu, .user-menu li {
+.user-menu, .user-menu li, #phone-header {
     float: right;
 }
-
+#phone-header, #curr-date{
+    font-size: 13px;
+    margin-right: 5px;
+    padding: 10px;
+    color: #888;
+}
+#curr-date{
+    float: left;
+}
 .toogle_filter span {
     font-size: 20px;
     float: right;
@@ -1581,7 +1623,7 @@ button.sbt-search span {
 }
 
 .modal.in {
-   display:block;
+ display:block;
 }
 
 .create-account input[type=number], .create-account input[type=text], .create-account input[type=password], .my-account input[type=number], .my-account input[type=text], .my-account input[type=password] {
@@ -1976,7 +2018,7 @@ label.error:before {
 /* -------------- loader3 -------------- */
 
 .loader{
-        position: relative;
+    position: relative;
     width: 300px;
     height: 20px;
     margin: 0 auto;
@@ -2010,9 +2052,9 @@ label.error:before {
     z-index: 0;
     opacity: 1;
     -webkit-transform-origin:  100% 0%;
-            transform-origin:  100% 0% ;
+    transform-origin:  100% 0% ;
     -webkit-animation: loader 10s ease-in-out infinite;
-            animation: loader 10s ease-in-out infinite;
+    animation: loader 10s ease-in-out infinite;
 }
 .recoverPassword input{
     display: block;
@@ -2035,10 +2077,10 @@ label.error:before {
     margin: 0px 15px;
     display: none;
 }
- .show-errors{
+.show-errors{
     height: 20px;
 }
- #recoverPasswordModal .success{
+#recoverPasswordModal .success{
     width: 100%;
     font-size: 12px;
     color: #5cb85c;
@@ -2124,7 +2166,7 @@ label.error:before {
    Base
    ========================================================================== */
 
-.waiting {
+   .waiting {
     font-size: 8px;
     margin: 0px 15px;
     display: none;;
@@ -2142,70 +2184,70 @@ label.error:before {
 
 
 /* Colors marked lightest (1) to darkest (8)
-   -------------------------------------------------------------------------- */
+-------------------------------------------------------------------------- */
 
 .waiting:before {
     box-shadow:
-        /* 1 */
-        0 1em #E82583,
-        0 1.125em #E82583,
-        0 1.25em #E82583,
-        0 1.375em  #E82583,
-        0 1.5em #E82583,
+    /* 1 */
+    0 1em #E82583,
+    0 1.125em #E82583,
+    0 1.25em #E82583,
+    0 1.375em  #E82583,
+    0 1.5em #E82583,
 
-        /* 3 */
-        -1em 0 #f156a0,
-        -1.125em 0 #f156a0,
-        -1.25em 0 #f156a0,
-        -1.375em 0 #f156a0,
-        -1.5em 0 #f156a0,
+    /* 3 */
+    -1em 0 #f156a0,
+    -1.125em 0 #f156a0,
+    -1.25em 0 #f156a0,
+    -1.375em 0 #f156a0,
+    -1.5em 0 #f156a0,
 
-        /* 5 */
-        0 -1em #f38bbc,
-        0 -1.125em #f38bbc,
-        0 -1.25em #f38bbc,
-        0 -1.375em #f38bbc,
-        0 -1.5em #f38bbc,
+    /* 5 */
+    0 -1em #f38bbc,
+    0 -1.125em #f38bbc,
+    0 -1.25em #f38bbc,
+    0 -1.375em #f38bbc,
+    0 -1.5em #f38bbc,
 
-        /* 7 */
-        1em 0 #f5c2da,
-        1.125em 0 #f5c2da,
-        1.25em 0 #f5c2da,
-        1.375em 0 #f5c2da,
-        1.5em 0 #f5c2da;
+    /* 7 */
+    1em 0 #f5c2da,
+    1.125em 0 #f5c2da,
+    1.25em 0 #f5c2da,
+    1.375em 0 #f5c2da,
+    1.5em 0 #f5c2da;
     transform: rotate(45deg);
     animation: extra-spin 1s infinite steps(8);
 }
 
 .waiting:after {
     box-shadow:
-        /* 2 */
-        -1em 0 #ef3e93,
-        -1.125em 0 #ef3e93,
-        -1.25em 0 #ef3e93,
-        -1.375em 0 #ef3e93,
-        -1.5em 0 #ef3e93,
+    /* 2 */
+    -1em 0 #ef3e93,
+    -1.125em 0 #ef3e93,
+    -1.25em 0 #ef3e93,
+    -1.375em 0 #ef3e93,
+    -1.5em 0 #ef3e93,
 
-        /* 4 */
-        0 -1em #ef76af,
-        0 -1.125em #ef76af,
-        0 -1.25em #ef76af,
-        0 -1.375em #ef76af,
-        0 -1.5em #ef76af,
+    /* 4 */
+    0 -1em #ef76af,
+    0 -1.125em #ef76af,
+    0 -1.25em #ef76af,
+    0 -1.375em #ef76af,
+    0 -1.5em #ef76af,
 
-        /* 6 */
-        1em 0 #f79ec8,
-        1.125em 0 #f79ec8,
-        1.25em 0 #f79ec8,
-        1.375em 0 #f79ec8,
-        1.5em 0 #f79ec8,
+    /* 6 */
+    1em 0 #f79ec8,
+    1.125em 0 #f79ec8,
+    1.25em 0 #f79ec8,
+    1.375em 0 #f79ec8,
+    1.5em 0 #f79ec8,
 
-        /* 8 */
-        0 1em #fff,
-        0 1.125em #fff,
-        0 1.25em #fff,
-        0 1.375em #fff,
-        0 1.5em #fff;
+    /* 8 */
+    0 1em #fff,
+    0 1.125em #fff,
+    0 1.25em #fff,
+    0 1.375em #fff,
+    0 1.5em #fff;
     animation: spin 1s infinite steps(8);
 }
 @-webkit-keyframes loader{
@@ -2237,26 +2279,27 @@ label.error:before {
 }
 
 @-moz-document url-prefix(http: //),url-prefix(https://) {
-scrollbar {
-    -moz-appearance: none !important;
-    background: rgb(0, 255, 0) !important;
-}
+    scrollbar {
+        -moz-appearance: none !important;
+        background: rgb(0, 255, 0) !important;
+    }
 
-thumb, scrollbarbutton {
-    -moz-appearance: none !important;
-    background-color: rgb(0, 0, 255) !important;
-}
+    thumb, scrollbarbutton {
+        -moz-appearance: none !important;
+        background-color: rgb(0, 0, 255) !important;
+    }
 
-thumb:hover, scrollbarbutton:hover {
-    -moz-appearance: none !important;
-    background-color: rgb(255, 0, 0) !important;
-}
+    thumb:hover, scrollbarbutton:hover {
+        -moz-appearance: none !important;
+        background-color: rgb(255, 0, 0) !important;
+    }
 
-scrollbarbutton {
-    display: none !important;
-}
+    scrollbarbutton {
+        display: none !important;
+    }
 
-scrollbar[orient="vertical"] {
-    min-width: 15px !important;
-}
+    scrollbar[orient="vertical"] {
+        min-width: 15px !important;
+    }
+
 

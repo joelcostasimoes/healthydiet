@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 require_once APPPATH . 'controllers/App.php';
 class Product extends App{
-    
+
     private $controller;
     private $model;
     public function __construct() {
@@ -22,18 +22,14 @@ class Product extends App{
     }
 
 	public function index() {
-        
-        
+
+
         $result = $this->product_model->getProducts()->result();
         $this->data_view['products'] = htmlspecialchars(json_encode($result, JSON_NUMERIC_CHECK));
-        $result = $this->product_model->all("gender")->result(); 
-        $this->data_view['gender'] = htmlspecialchars(json_encode($result));
-        $result = $this->product_model->all("age")->result(); 
-        $this->data_view['age'] = htmlspecialchars(json_encode($result));
-        $result = $this->product_model->all("categories")->result(); 
+        $result = $this->product_model->all("categories")->result();
         $this->data_view['categories'] = htmlspecialchars(json_encode($result));
-        $result = $this->product_model->all("pathologies")->result(); 
-        $this->data_view['pathologies'] = htmlspecialchars(json_encode($result)); 
+        $result = $this->product_model->all("brands")->result();
+        $this->data_view['brands'] = htmlspecialchars(json_encode($result));
         $this->data_view['title']='Produtos - HEALTHYDiet';
         $this->loadTemplate('product/products', $this->data_view);
 	}
@@ -45,11 +41,11 @@ class Product extends App{
 	 * @param      <type>  $idCategory  (description)
 	 */
 	public function productsByCategories() {
-		
+
 		$this->data_view['idCategory'] = $this->uri->segment(2, 0);
 		$this->loadTemplate('product/products', $this->data_view);
 	}
-	
+
 	public function product($id)
 	{
 
@@ -71,7 +67,7 @@ class Product extends App{
         $this->data_view['product'] = htmlspecialchars(json_encode($this->data_view['product']));
         $condition["idProduct"]=$id;
         $list_categories = $this->product_model->find($condition, 'product_category')->result();
-       
+
         $this->data_view['relatedProducts'] = htmlspecialchars(json_encode($this->product_model->getProductsRelated($list_categories, $id)));
 
 		$this->loadTemplate('product/product', $this->data_view);
@@ -86,27 +82,17 @@ class Product extends App{
         for($i=2; $i<=$this->uri->total_segments(); $i++){
             $parameter[$url[$i]]=$url[++$i];
         }
-        if (!isset($parameter['gender'])) {
-            $parameter['gender']=0;
-        }else{
-            $historic.="/gender/".$parameter['gender'];
-        }
-        if (!isset($parameter['age'])) {
-            $parameter['age']=0;
-        }else{
-            $historic.="/age/".$parameter['age'];
-        }
         if (!isset($parameter['categories'])) {
             $parameter['categories']=NULL;
         }else{
             $historic.="/categories/".$parameter['categories'];
             $parameter['categories'] = explode("-", $parameter['categories']);
         }
-        if (!isset($parameter['pathologies'])) {
-            $parameter['pathologies']=NULL;
+        if (!isset($parameter['brands'])) {
+            $parameter['brands']=NULL;
         }else{
-            $historic.="/pathologies/".$parameter['pathologies'];
-            $parameter['pathologies'] = explode("-", $parameter['pathologies']);
+            $historic.="/brands/".$parameter['brands'];
+            $parameter['brands'] = explode("-", $parameter['brands']);
         }
         if (!isset($parameter['page'])) {
             $parameter['page']='1-15';
@@ -131,21 +117,19 @@ class Product extends App{
             $historic.="/keywords/". $this->input->post('txtSearch');
             $keywords = $this->input->post('txtSearch');
             $this->data_view['title']='Resultados da procura para "'.$keywords.'" - HEALTHYDiet';
-        }     
+        }
         $this->data_view['historic']=$historic;
         $this->data_view['keyword'] = htmlspecialchars(json_encode($keywords));
-        $this->data_view['ageSelected'] = htmlspecialchars(json_encode($parameter['age']));
-        $this->data_view['genderSelected'] =  htmlspecialchars(json_encode($parameter['gender']));
         $this->data_view['categoriesChecked'] = htmlspecialchars(json_encode($this->product_model->getListChecked('categories', $parameter['categories'])));
 
-        $this->data_view['pathologiesChecked'] =  htmlspecialchars(json_encode($this->product_model->getListChecked('pathologies', $parameter['pathologies'])));
+        $this->data_view['brandsChecked'] =  htmlspecialchars(json_encode($this->product_model->getListChecked('brands', $parameter['brands'])));
 
         $this->data_view['limit'] = htmlspecialchars(json_encode(intval($parameter['page'][1])));
         $this->data_view['currentPage'] = htmlspecialchars(json_encode(intval($parameter['page'][0])));
         $this->data_view['order'] = htmlspecialchars(json_encode(intval($parameter['order'])));
-        $pathologies = str_replace("-", ", ", $parameter['pathologies']);
+        $brands = str_replace("-", ", ", $parameter['brands']);
         $categories = str_replace("-", ", ", $parameter['categories']);
-        $filtered_products = $this->product_model->getProducts($parameter['gender'], $parameter['age'], $categories, $pathologies, $parameter['order'], $keywords);
+        $filtered_products = $this->product_model->getProducts($categories, $brands, $parameter['order'], $keywords);
         $filtered_products_aux= clone $filtered_products;
         $numberProducts = $filtered_products_aux->get()->num_rows();
         $this->data_view['numberProducts'] = htmlspecialchars(json_encode($numberProducts));
@@ -157,40 +141,28 @@ class Product extends App{
 
         //echo $this->db->last_query();
         $this->data_view['products'] = htmlspecialchars(json_encode($result, JSON_NUMERIC_CHECK));
-        $result = $this->product_model->all("gender")->result(); 
-        $this->data_view['gender'] = htmlspecialchars(json_encode($result));
-        $result = $this->product_model->all("age")->result(); 
-        $this->data_view['age'] = htmlspecialchars(json_encode($result));
-        $result = $this->product_model->all("categories")->result(); 
+        $result = $this->product_model->all("categories")->result();
         $this->data_view['categories'] = htmlspecialchars(json_encode($result));
-        $result = $this->product_model->all("pathologies")->result(); 
-        $this->data_view['pathologies'] = htmlspecialchars(json_encode($result));
+        $result = $this->product_model->all("brands")->result();
+        $this->data_view['brands'] = htmlspecialchars(json_encode($result));
 
         $this->loadTemplate('product/products', $this->data_view);
     }
 	public function getProducts() {
-        $gender=$this->input->post('gender');
-        $age=$this->input->post('age');
         $categories=$this->input->post('categories');
-        $pathologies=$this->input->post('pathologies');
+        $brands=$this->input->post('brands');
         $order=$this->input->post('order');
         $page=$this->input->post('page');
         $limit=$this->input->post('limit');
         $keyword=$this->input->post('keyword');
         $historic="products";
-        if ($gender!="" and $gender!=0) {
-            $historic.="/gender/".$gender;
-        }
-        if ($age!="" and $age!=0) {
-            $historic.="/age/".$age;
-        }
         if ($categories!="") {
             $historic.="/categories/".$categories;
             $categories = explode("-", $categories);
         }
-        if ($pathologies!="") {
-            $historic.="/pathologies/".$pathologies;
-            $pathologies = explode("-", $pathologies);
+        if ($brands!="") {
+            $historic.="/brands/".$brands;
+            $brands = explode("-", $brands);
         }
         if ($order!="" and $order!=0) {
             $historic.="/order/".$order;
@@ -202,10 +174,10 @@ class Product extends App{
             $historic.="/keyword/".$keyword;
         }
         $result['historic']=$historic;
-        $filtered_products = $this->product_model->getProducts($gender, $age, $categories, $pathologies, $order, $keyword);
+        $filtered_products = $this->product_model->getProducts($categories, $brands, $order, $keyword);
 
         $filtered_products_aux= clone $filtered_products;
-        $result['numberProducts'] = $filtered_products_aux->get()->num_rows(); 
+        $result['numberProducts'] = $filtered_products_aux->get()->num_rows();
         $result['products'] = $filtered_products->limit($limit,$limit*($page-1))->get()->result();
 
         $result['numberPages'] = $this->product_model->paginate($limit, $result['numberProducts']);

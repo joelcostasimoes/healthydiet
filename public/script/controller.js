@@ -28,31 +28,23 @@ app.controller('listProducts', function($scope, $log, $http) {
             }
         });
         i = 0;
-        $.each($scope.mdlPathology, function(k, v) {
-            if (v >= 0 && v <= $scope.mdlPathology.length && v != '') {
+        $.each($scope.mdlBrand, function(k, v) {
+            if (v >= 0 && v <= $scope.mdlBrand.length && v != '') {
                 if (i == 0) {
-                    config_list_products['pathologies'] = v;
+                    config_list_products['brands'] = v;
                     i++;
                 } else {
-                    config_list_products['pathologies'] += "-" + v;
+                    config_list_products['brands'] += "-" + v;
                 }
             }
         });
-        if ($scope.mdlAge['val'] >= 0) {
-            config_list_products['age'] = $scope.mdlAge['val'];
-        }
-        if ($scope.mdlGender['val'] >= 0) {
-            config_list_products['gender'] = $scope.mdlGender['val'];
-        }
         $.ajax({
             url: base_url + "getProducts",
             type: "POST",
             data: {
                 keyword: $scope.keyword,
                 categories: config_list_products['categories'],
-                pathologies: config_list_products['pathologies'],
-                age: config_list_products['age'],
-                gender: config_list_products['gender'],
+                brands: config_list_products['brands'],
                 order: $scope.orderIndex,
                 limit: $scope.pageSize,
                 page: page
@@ -71,12 +63,6 @@ app.controller('listProducts', function($scope, $log, $http) {
     }
     $scope.count = [''];
     $scope.order = ['id', false, 'name', false, 'name', true, 'price', false, 'price', true];
-    $scope.mdlGender = {
-        val: ''
-    };
-    $scope.mdlAge = {
-        val: ''
-    };
     $scope.valuesOption = [{
         'id': 0,
         'name': '--'
@@ -506,6 +492,7 @@ app.controller('recoverPassword', function($scope, $log, $http) {
         $('.error').hide();
         $('.success').hide();
         var email = $scope.email;
+        console.log(email + "email");
         $.ajax({
             url: base_url + "requestNewPassword",
             type: "POST",

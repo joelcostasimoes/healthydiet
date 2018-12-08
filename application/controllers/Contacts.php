@@ -21,19 +21,29 @@ class Contacts extends  App {
         );
         $this->load->library('email');
         $this->email->initialize($config);
-        $this->email->set_newline("\r\n"); 
+        $this->email->set_newline("\r\n");
         $this->load->model('user_logged_model');
         $this->load->model('contact_model');
         $this->data_view['user_logged']=FALSE;
         if ($this->session->userdata('user_logged')) {
             $this->data_view['user_logged']=$this->session->userdata('user_logged');
         }
-    } 
+    }
     public function index()
     {
-        $this->data_view['title']='Contactos - HEALTHYDiet';
+        $this->data_view['title']='Contactos - Nutribem';
         $this->loadTemplate('contacts/contact', $this->data_view);
     }
+    public function whereWeAre(){
+        $this->data_view['title']='Onde estamos - Nutribem';
+        $this->loadTemplate('contacts/whereWeAre', $this->data_view);
+    }
+
+    public function services(){
+        $this->data_view['title']='Serviçoes/Tratamentos - Nutribem';
+        $this->loadTemplate('contacts/services', $this->data_view);
+    }
+
     public function contact()
     {
         $this->form_validation->set_rules($this->contact_model->config);
@@ -52,7 +62,7 @@ class Contacts extends  App {
             $data['error']=TRUE;
             echo json_encode($data);
         }
-        
+
     }
 }
 

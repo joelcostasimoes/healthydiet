@@ -48,10 +48,10 @@ class Account extends App {
         $this->data_view['newsletter'] = $this->account_model->find($condition,'newsletter')->row();
         $this->data_view['data_orders'] = $this->account_model->getMyOrders($this->data_view['user_logged']['id'], 0);
         $this->data_view['data_pending_orders'] = $this->account_model->getMyOrders($this->data_view['user_logged']['id'], 1);
-        
+
         $this->data_view['data_card'] = htmlspecialchars(json_encode($this->account_model->getMyCard($this->data_view['user_logged']['id'])));
         $this->data_view['sub_total'] = $this->account_model->getSubTotalInMyCard($this->data_view['user_logged']['id']);
-        
+
         if (!isset($this->data_view['data_user'])) {
             $this->data_view['data_user'] = NULL;
         }
@@ -187,7 +187,7 @@ class Account extends App {
             $result = $this->account_model->find($condition, "newsletter")->num_rows();
             if ($result == 0){
                 $newsletter['email']=$this->input->post('email');
-                $newsletter['isActive']=TRUE;   
+                $newsletter['isActive']=TRUE;
                 $this->account_model->create($newsletter, "newsletter");
                 $subject="Subscrição da newsletter Healthy Diet.";
                 $this->sendEmail('', '', '', $condition['email'], '', 'newsletter', $subject, 'geral@healthydiet.pt');
@@ -213,11 +213,11 @@ class Account extends App {
      public function unsubscriveNewsletter($email){
         $newsletter['isActive']=FALSE;
         $condition['email'] = base64_decode($email);
-        $this->account_model->change($newsletter, $condition, "newsletter");   
+        $this->account_model->change($newsletter, $condition, "newsletter");
         $data_view['titleInfo']="Subscrição Anulada";
         $data_view['info']="A subscrição da newsletter Healthy Diet foi cancelada com sucesso.";
-        $this->session->set_flashdata('data_view', $data_view); 
-        redirect('home', 'refresh');    
+        $this->session->set_flashdata('data_view', $data_view);
+        redirect('home', 'refresh');
     }
     public function verifyEmail() {
         $email = $this->input->post('email');
@@ -268,7 +268,7 @@ class Account extends App {
             $subject = 'Pedido de Alteração de Password';
             $token = $this->account_model->createToken($condition['email']);
             $min = rand ( 0, 35 );
-            $cod = substr($token, $min, 4); 
+            $cod = substr($token, $min, 4);
             if (strlen($min)==1) {
                 $min='0'.$min;
             }
@@ -283,7 +283,7 @@ class Account extends App {
             $data['message']="Não existe utilizador registado com este email!";
             $data['error']=true;
             echo json_encode($data);
-        }   
+        }
     }
     public function recoverPassword(){
         $this->data_view['title']='Esqueceu-Se Da Sua Palavra-Passe? - HEALTHYDiet';
@@ -296,7 +296,7 @@ class Account extends App {
         $cod=$this->input->post('cod');
 
         $condition['email'] = $email;
-        
+
         $row=$this->account_model->find($condition)->row();
         if($row){
             if($confirmPassword==$password){
@@ -331,13 +331,13 @@ class Account extends App {
             $data['message']="Não existe utilizador registado com este email!";
             echo json_encode($data);
         }
-        
+
     }
 
     public function checkout() {
         $this->auth_model->isLoggedIn();
         $this->data_view['data_user'] = $this->account_model->getDataUser($this->data_view['user_logged']['id']);
-        
+
         $myCard=$this->account_model->getMyCard($this->data_view['user_logged']['id']);
         $totalCard=$this->account_model->getTotalCard($this->data_view['user_logged']['id']);
 
@@ -350,12 +350,12 @@ class Account extends App {
         }
         $this->data_view['data_total_card'] = htmlspecialchars(json_encode($totalCard));
         $this->data_view['data_card'] = htmlspecialchars(json_encode($myCard));
-        
+
         $zone = "international";
         if(!is_null($this->data_view['data_user']['eaddress'])){
             if ($this->data_view['data_user']['eaddress']->country == "Portugal") {
                 $postal_code= substr($this->data_view['data_user']['eaddress']->zipNumber, 0, 5);
-                if( is_numeric( $postal_code ) and $postal_code<9000) 
+                if( is_numeric( $postal_code ) and $postal_code<9000)
                     $zone = "portugal";
                 else
                     $zone = "acoresMadeira";
@@ -363,7 +363,7 @@ class Account extends App {
         }else{
             if ($this->data_view['data_user']['faddress']->country == "Portugal") {
                 $postal_code= substr($this->data_view['data_user']['faddress']->zipNumber, 0, 5);
-                if( is_numeric( $postal_code ) and $postal_code<9000) 
+                if( is_numeric( $postal_code ) and $postal_code<9000)
                     $zone = "portugal";
                 else
                     $zone = "acoresMadeira";
@@ -389,7 +389,7 @@ class Account extends App {
         $order=new stdClass();
         $order_address = new stdClass();
         $order->date=date("Y-m-d H:i:s");
-        $order_address->delivery_address=$data['data_user']['eaddress']; 
+        $order_address->delivery_address=$data['data_user']['eaddress'];
         $order_address->billing_address=$data['data_user']['faddress'];
         $order->nif=$data['data_user']['user']->nif;
         $order->nameCompany=$data['data_user']['user']->nameCompany;
@@ -403,7 +403,7 @@ class Account extends App {
         if(!is_null($data['data_user']['eaddress'])){
             if ($data['data_user']['eaddress']->country == "Portugal") {
                 $postal_code= substr($data['data_user']['eaddress']->zipNumber, 0, 5);
-                if( is_numeric( $postal_code ) and $postal_code<9000) 
+                if( is_numeric( $postal_code ) and $postal_code<9000)
                     $zone = "portugal";
                 else
                     $zone = "acoresMadeira";
@@ -411,7 +411,7 @@ class Account extends App {
         }else{
             if ($data['data_user']['faddress']->country == "Portugal") {
                 $postal_code= substr($data['data_user']['faddress']->zipNumber, 0, 5);
-                if( is_numeric( $postal_code ) and $postal_code<9000) 
+                if( is_numeric( $postal_code ) and $postal_code<9000)
                     $zone = "portugal";
                 else
                     $zone = "acoresMadeira";
@@ -433,8 +433,8 @@ class Account extends App {
             $order->name=$data['data_user']['user']->fname." ".$data['data_user']['user']->lname;
         }
         $data['data_order']['order']=$order;
-        for ($i=0; $i <count($data['data_card']) ; $i++) { 
-            $data['data_card'][$i]->id_order= $order->id;            
+        for ($i=0; $i <count($data['data_card']) ; $i++) {
+            $data['data_card'][$i]->id_order= $order->id;
             $card=$this->account_model->create($data['data_card'][$i], "orders_products");
             $data['data_card'][$i]->id = $card;
         }
@@ -457,7 +457,7 @@ class Account extends App {
         $this->sendEmail('', '', '', 'geral@healthydiet.pt', '', 'recibo_admin', 'Pedido de encomenda loja online','orders@healthydiet.pt',$data);
         $data_view['titleInfo']="Pedido de encomenda efectudado com sucesso";
         $data_view['info']='Caro(a) cliente, <br><br> Obrigado pela sua encomenda. <br><br> Em breve irá receber instruções no seu email para concluir a sua encomenda.';
-        $this->session->set_flashdata('data_view', $data_view); 
+        $this->session->set_flashdata('data_view', $data_view);
         redirect(base_url() , 'refresh');
     }
     public function receipt($id){
@@ -477,7 +477,7 @@ class Account extends App {
             //download PDF
             $file = 'public/invoice/factura_'.$id.'.pdf';
 
-            $this->m_pdf->pdf->Output($pdfFilePath, "D"); 
+            $this->m_pdf->pdf->Output($pdfFilePath, "D");
         }else{
             redirect(base_url() , 'refresh');
         }
@@ -489,10 +489,10 @@ class Account extends App {
 
         $file = '/public/invoice/factura_'.$id.'.pdf';
         //load the view and saved it into $html variable
-        
+
         $html=$this->load->view('receipt/recibo_1.html','',TRUE);
- 
-       
+
+
 
         if($row){
             $filename = 'factura_'.$id.'.pdf';
@@ -524,12 +524,12 @@ class Account extends App {
         //echo 'produto adicionado com sucesso';
     }
 
- 
+
 
 function generateRef($order_id, $order_value) {
-    define('URL', 'https://services.lusopay.com/PaymentServices/PaymentServices.svc?wsdl'); 
-    define('NIF', '229926720'); 
-    define('GUID', 'ab0410c0-49ba-4bef-97b2-9f6415ae2fef'); 
+    define('URL', 'https://services.lusopay.com/PaymentServices/PaymentServices.svc?wsdl');
+    define('NIF', '229926720');
+    define('GUID', 'ab0410c0-49ba-4bef-97b2-9f6415ae2fef');
     $client = new SoapClient(URL);
 
     //Data, connection, auth

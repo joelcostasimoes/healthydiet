@@ -1,6 +1,6 @@
 
 <div class="single-product-area" ng-controller="listProducts" >
-    <div class="container" ng-init="loading=true;keyword=<?php echo $keyword; ?>;mdlGender['val']=<?php echo $genderSelected; ?>;mdlAge['val']=<?php echo $ageSelected; ?>;mdlPathology=<?php echo $pathologiesChecked; ?>;mdlCategory=<?php echo $categoriesChecked; ?>;orderIndex='<?php echo $order; ?>';pageSize='<?php echo $limit; ?>'; products=<?php echo $products; ?>; pathologies=<?php echo $pathologies; ?>; ages=<?php echo $age; ?>; genders=<?php echo $gender; ?>; categories=<?php echo $categories; ?>; currentPage=<?php echo $currentPage; ?>; total=<?php echo $numberProducts; ?>; numberPages=<?php echo $numberPages; ?>;">
+    <div class="container" ng-init="loading=true;keyword=<?php echo $keyword; ?>;mdlbrand=<?php echo $brandsChecked; ?>;mdlCategory=<?php echo $categoriesChecked; ?>;orderIndex='<?php echo $order; ?>';pageSize='<?php echo $limit; ?>'; products=<?php echo $products; ?>; brands=<?php echo $brands; ?>; categories=<?php echo $categories; ?>; currentPage=<?php echo $currentPage; ?>; total=<?php echo $numberProducts; ?>; numberPages=<?php echo $numberPages; ?>;">
         <div class="row">
             <div class="col-md-3 col-sm-12 col-xs-12 filters">
                 <form name="Form">
@@ -8,49 +8,15 @@
                     <hr>
                     <p ng-hide="keyword==null" class="show_keyword">Resultados da pesquisa por: '{{keyword}}'</p>
                     <hr ng-hide="keyword==null">
-                    <p class="toogle_filter">Género: <span>+</span></p>
+                    <p class="toogle_filter">Marca: <span>+</span></p>
                     <ul class="col-md-12 col-sm-12 col-xs-12 ul_filter" >
-                        <li>
-                            <label for="gender_0">
-                                <input type="radio" ng-model="mdlGender.val" ng-value="'0'" id="gender_0"> 
-                                <span>Todos: </span>
-                            </label>
-                        </li>
-                        <li ng-repeat="gender in genders">
-                            <label for="gender_{{gender.id}}">
-                                <input type="radio" ng-model="mdlGender.val" ng-value="{{gender.id}}" id="gender_{{gender.id}}"> 
-                                <span>{{gender.name}} </span>
-                            </label>
-                        </li>
-                    </ul>
-                    <hr>
-                    <p class="toogle_filter">Idade: <span >+</span></p>
-                    <ul class="col-md-12 col-sm-12 col-xs-12 ul_filter" >
-                        <li>
-                            <label for="age_0">
-                                <input type="radio" ng-model="mdlAge.val" ng-value="'0'" name="age_0" id="age_0"> 
-                                <span>Todos: </span>
-                            </label>
-                        </li>
-                        <li ng-repeat="age in ages">
-                            <label for="age_{{age.id}}">
-                                <input type="radio" ng-model="mdlAge.val" ng-value="{{age.id}}" name="age_{{age.id}}" id="age_{{age.id}}"> 
-                                <span>{{age.name}} </span>
-                            </label>
-                        </li>
-                    </ul>
-                    <hr>
-                    <p class="toogle_filter">Patologias: <span>+</span></p>
-                    
-                    
-                    <ul class="col-md-12 col-sm-12 col-xs-12 ul_filter" >
-                        <li ng-repeat="pathology in pathologies track by $index">
-                            <label for="pathology_{{pathology.id}}">
-                                <input type="checkbox" id="pathology_{{pathology.id}}"
-                                ng-model="mdlPathology[$index]"
-                                ng-true-value="'{{pathology.id}}'"
-                                ng-false-value="''"> 
-                                <span>{{pathology.name}} </span>
+                        <li ng-repeat="brand in brands track by $index">
+                            <label for="brand_{{brand.id}}">
+                                <input type="checkbox" id="brand_{{brand.id}}"
+                                ng-model="mdlBrand[$index]"
+                                ng-true-value="'{{brand.id}}'"
+                                ng-false-value="''">
+                                <span>{{brand.name}} </span>
                             </label>
                         </li>
                     </ul>
@@ -63,7 +29,7 @@
                                 <input type="checkbox"  id="category_{{category.id}}"
                                 ng-model="mdlCategory[$index]"
                                 ng-true-value="'{{category.id}}'"
-                                ng-false-value="''"> 
+                                ng-false-value="''">
                                 <span>{{category.name}} </span>
                             </label>
                         </li>
@@ -75,7 +41,7 @@
             <div class="col-md-9 col-sm-12 col-xs-12 clearfix:after"  ng-init="count=0">
                 <div class="col-md-12 col-sm-12 col-xs-12 orde_npage">
                     <div class="floatleft">
-                        Ordenar por 
+                        Ordenar por
                         <select ng-model="orderIndex" ng-change="findProducts()">
                             <option value="0" >--</option>
                             <option value="1" >Nome de produto: A-Z</option>
@@ -125,7 +91,7 @@
                             </div>
                             <div class="product-carousel-price col-md-6 col-sm-6">
                                 <del>{{product.original_price}} €</del>
-                            </div>  
+                            </div>
                             <?php if($user_logged!=FALSE){ ?>
                             <form action="" class="cart col-md-5 col-sm-5 col-xs-5">
                                 <div class="quantity">
@@ -136,7 +102,7 @@
                                 <button class="add_to_cart_button glyphicon glyphicon-shopping-cart" ng-click="addItem(product.id)"><span>Adicionar</span></button>
                             </div>
                             <?php } ?>
-                        </div>  
+                        </div>
                     </div>
                 </div>
             </div>
@@ -150,7 +116,7 @@
                             <span ng-click="findProducts($index+1)">{{$index+1}}</span>
                         </li>
                     </ul>
-                </div>               
+                </div>
             </div>
         </div>
     </div>

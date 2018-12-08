@@ -6,18 +6,18 @@
                 </h2>
                 <div class="col-md-12">
                     <p>
-                        Healthy diet
+                        NutriBem Unipessoal Lda
                     </p>
                     <p>
-                        Telefone: 249328322
+                        Telefone: 249 403 868
                     </p>
                     <p>
-                        Telemóvel: 912828281
+                        Telemóvel: 914 942 647
                     </p>
                     <p>
-                        Email: geral@healthydiet.pt
+                        Email: geral.nutribem@gmail.com
                     </p>
-                    <small>*(Encomendas Online) Atendimento de 2ª a Sábadoª, das 10h às 20h, excepto feriados.</small>
+                    <small>*Atendimento: 2a a 6a feira das 09.00 às 19.00. Sábado das 09.00 às 13.00, excepto feriados.</small>
                 </div>
             </div>
             <div class="col-md-7 col-sm-12 col-xs-12">
@@ -36,8 +36,8 @@
                         <p class="col-md-12 col-sm-12 col-xs-12"><label for="review">*Mensagem</label> <textarea name="message" ng-model="message" id="" cols="30" rows="10"></textarea></p>
                         <div class="col-md-12 col-sm-12 col-xs-12 show-errors">
                             <div class="waiting"></div>
-                            <div class="error"></div> 
-                            <div class="success"></div> 
+                            <div class="error"></div>
+                            <div class="success"></div>
                         </div>
                         <p class="col-md-12 col-sm-12 col-xs-12"><input class="add_to_cart_button" type="submit" value="Enviar"></p>
                     </div>

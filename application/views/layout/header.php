@@ -3,6 +3,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
+                <div id="curr-date"></div>
+
                 <div class="user-menu">
                     <ul>
                         <?php if($user_logged!=FALSE){ ?>
@@ -13,6 +15,9 @@
                             <li><a href="" data-toggle="modal" data-target="#loginModal"><i class="fa fa-sign-in"></i> Entrar</a></li>
                         <?php } ?>
                     </ul>
+                </div>
+                <div id="phone-header">
+                    +351 249 403 868 \ 914 942 647
                 </div>
             </div>
         </div>
@@ -109,6 +114,14 @@ if($info!=null and $info!=''){ ?>
                         </h1>
                     </div>
                 </div>
+                <div class="box-search floatright">
+                    <form action="<?=base_url()?>products" method="post" accept-charset="utf-8">
+                        <div class="floatright">
+                            <input class="txt-search" name="txtSearch" type="text">
+                            <button type="submit" name="sbt-search" class="sbt-search" ><span><i class="fa fa-search"></i> Procurar</span></button>
+                        </div>
+                    </form>
+                </div>
                 <?php if($user_logged!=FALSE){ ?>
                     <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
                         <div class="shopping-item">
@@ -148,17 +161,7 @@ if($info!=null and $info!=''){ ?>
                             <a href="<?=base_url()?>contacts">Contactos</a>
                         </li>
                     </ul>
-                    <div class="box-search floatright">
-                        <form action="<?=base_url()?>products" method="post" accept-charset="utf-8">
-                            <div class="floatright">
-                                <input class="txt-search" name="txtSearch" type="text">
-                                <button type="submit" name="sbt-search" class="sbt-search" ><span><i class="fa fa-search"></i> Procurar</span></button>
-                            </div>
-                        </form>
-                    </div>
-
                 </div>
-
             </div>
         </div>
     </div>

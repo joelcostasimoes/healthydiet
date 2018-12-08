@@ -72,6 +72,8 @@ $route['products/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/
 $route['products/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)'] = 'product/products/$1/$2/$3/$4/$5/$6/$7/$8/$9/$10/$11/$12/$13/$14';
 $route['getProducts'] = 'product/getProducts';
 $route['contacts'] = 'contacts';
+$route['whereWeAre'] = 'contacts/whereWeAre';
+$route['services'] = 'contacts/services';
 $route['register'] = 'account';
 $route['verifyEmail'] = 'account/verifyEmail';
 $route['createAccount'] = 'account/createAccount';

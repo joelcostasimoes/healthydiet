@@ -96,9 +96,9 @@ define("NO_IMAGE_PATH", "");
 /* Database */
 define('DB_HOSTNAME', 'localhost');
 define('DB_SCHEMA', 'healthy1_db');
-define('DB_USERNAME', 'healthy1_adm');
-define('DB_PASSWORD', 'szwS*QV@0f6N');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', 'root');
 
 /* Ours */
-define('URL_BASE', 'http://healthydiet.pt/loja/');
+define('URL_BASE', 'http://localhost:8888/healthydiet/');
 define('FREE_TRANSPORT', '40');
