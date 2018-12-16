@@ -6,14 +6,10 @@
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Nutribem</h2>
                         <ul>
-                            <li><a href="">Quem Somos</a></li>
+                            <li><a href="<?=base_url()?>whoWeAre">Quem Somos</a></li>
                             <li><a href="<?=base_url()?>whereWeAre">Onde estamos</a></li>
                             <li><a href="<?=base_url()?>contacts">Contactos</a></li>
                         </ul>
-                        <div class="footer-social">
-                            <a href="https://www.facebook.com/nutritionandwellnessHD" target="_blank"><i class="fa fa-facebook"></i></a>
-                            <a href="#" target="_blank"><i class="fa fa-google"></i></a>
-                        </div>
                     </div>
                 </div>
 
@@ -21,9 +17,9 @@
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Encomendas</h2>
                         <ul>
-                            <li><a href="#">Portes/Entrega</a></li>
-                            <li><a href="#">Devoluções e trocas</a></li>
-                            <li><a href="#">Método de pagamento</a></li>
+                            <li><a href="<?=base_url()?>transportsDelivery">Portes/Entrega</a></li>
+                            <li><a href="<?=base_url()?>returnsExchanges">Devoluções e trocas</a></li>
+                            <li><a href="<?=base_url()?>paymentMethod">Método de pagamento</a></li>
                         </ul>
                     </div>
                 </div>
@@ -32,9 +28,9 @@
                         <h2 class="footer-wid-title">Siga-nos</h2>
                         <div class="footer-social">
                             <ul>
-                                <li><a href="https://www.facebook.com/nutritionandwellnessHD" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-google"></i></a></li>
-                                <li><a href="#" target="_blank"><i class="fa fa-google"></i></a></li>
+                                <li><a href="https://www.facebook.com/nutribem2018" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href=" https://www.instagram.com/nutritionandwellness34/? fbclid=IwAR2R8DaLlx2Ay3nCJBaZxv5iDoLzAY_c-Ga9Xm0Ycnq0AQJeJQO8vlkKsoo" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://twitter.com/lda_unip?fbclid=IwAR0bbLuBWqTnMJ- XnRAvVCaIu1nQMfu5Wrng10do4NJG_znpflw_OOYP-Q4" target="_blank"><i class="fa fa-twitter"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -44,9 +40,9 @@
                     <div class="footer-menu">
                         <h2 class="footer-wid-title">Reclamações</h2>
                         <ul>
-                            <li><a href="#">Sugestões e reclamações</a></li>
-                            <li><a href="#">Livro de reclamações electrónico</a></li>
-                            <li><a href="#">Método de pagamento</a></li>
+                            <li><a href="<?=base_url()?>suggestionsComplaints">Sugestões e reclamações</a></li>
+                            <li><a href=" https://www.livroreclamacoes.pt/inicio" target="_blank">Livro de reclamações electrónico</a></li>
+                            <li><a href="<?=base_url()?>conflits">Resolução alternativa de conflito</a></li>
                         </ul>
                     </div>
                 </div>

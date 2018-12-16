@@ -14,22 +14,23 @@
                 <div class="col-md-12">
                     <div class="brand-wrapper">
                         <h2 class="section-title">Marcas</h2>
-                        <div class="brand-list">
-                            <img src="<?=base_url()?>/public/img/brands/1.png" alt="">
-                            <img src="<?=base_url()?>/public/img/brands/2.png" alt="">
-                            <img src="<?=base_url()?>/public/img/brands/3.png" alt="">
-                            <img src="<?=base_url()?>/public/img/brands/4.png" alt="">
-                            <img src="<?=base_url()?>/public/img/brands/5.png" alt="">
-                            <img src="<?=base_url()?>/public/img/brands/6.png" alt="">
-                            <img src="<?=base_url()?>/public/img/brands/7.png" alt="">
-                            <img src="<?=base_url()?>/public/img/brands/4.png" alt="">
-                            <img src="<?=base_url()?>/public/img/brands/1.png" alt="">
-                            <img src="<?=base_url()?>/public/img/brands/2.png" alt="">
-                            <img src="<?=base_url()?>/public/img/brands/3.png" alt="">
-                            <img src="<?=base_url()?>/public/img/brands/4.png" alt="">
-                            <img src="<?=base_url()?>/public/img/brands/5.png" alt="">
-                            <img src="<?=base_url()?>/public/img/brands/6.png" alt="">
-                            <img src="<?=base_url()?>/public/img/brands/7.png" alt="">
+                        <div>
+                            <div class="col-md-3 box-info-home">
+                                <p>Preço Baixo</p>
+                                <img src="<?=base_url()?>public/img/euro.png">
+                            </div>
+                            <div class="col-md-3 box-info-home">
+                                <p>Qualidade Garantida</p>
+                                <img src="<?=base_url()?>public/img/medal.png">
+                            </div>
+                            <div class="col-md-3 box-info-home">
+                                <p>Entrega em 48h</p>
+                                <img src="<?=base_url()?>public/img/truck.png">
+                            </div>
+                            <div class="col-md-3 box-info-home">
+                                <p>Portes Gratis > 30€</p>
+                                <img src="<?=base_url()?>public/img/box.png">
+                            </div>
                         </div>
                     </div>
                 </div>

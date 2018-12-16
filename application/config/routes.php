@@ -73,7 +73,15 @@ $route['products/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/(:any)/
 $route['getProducts'] = 'product/getProducts';
 $route['contacts'] = 'contacts';
 $route['whereWeAre'] = 'contacts/whereWeAre';
-$route['services'] = 'contacts/services';
+$route['services'] = 'info/services';
+
+$route['suggestionsComplaints'] = 'info/suggestionsComplaints';
+$route['conflits'] = 'info/conflits';
+$route['paymentMethod'] = 'info/paymentMethod';
+$route['transportsDelivery'] = 'info/transportsDelivery';
+$route['returnsExchanges'] = 'info/returnsExchanges';
+$route['whoWeAre'] = 'info/whoWeAre';
+
 $route['register'] = 'account';
 $route['verifyEmail'] = 'account/verifyEmail';
 $route['createAccount'] = 'account/createAccount';

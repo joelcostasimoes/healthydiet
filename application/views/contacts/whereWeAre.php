@@ -1,8 +1,10 @@
         <div class="container single-product-area" ng-controller="contact">
             <div class="row">
-                <h2 class="sidebar-title col-md-12">
-                    Onde Estamos
-                </h2>
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <h2 class="sidebar-title col-md-12">
+                        Onde Estamos
+                    </h2>
+                </div>
             </div>
             <div class="row">
                 <div class="col-md-5 col-sm-12 col-xs-12">
